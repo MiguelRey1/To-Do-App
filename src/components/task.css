@@ -18,8 +18,7 @@
 .task-description-title {
   font-weight: 500;
   font-size: 1.2em;
-  align-self: flex-start;
-  margin-left: 12px;
+  align-self: center;
   color: burlywood;
 }
 
@@ -51,6 +50,10 @@
 
 }
 
+.task-buttons-container{
+  display: flex;
+  justify-content: center;
+}
 
 .btnEdit,
 .btnDelete {
@@ -67,9 +70,10 @@
   background-color: #771100;
 }
 
-.completed{
+.completed {
   background-color: darkgreen;
 }
-.completed>h2{
+
+.completed>h2 {
   text-decoration: line-through;
 }

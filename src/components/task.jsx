@@ -19,8 +19,10 @@ function Task({title, description, datetask, Edit, Delete, idTask, CheckTask, cs
           <input type="checkbox" onChange={(e)=>CheckTask(e)} name="completed" id={idTask} />
           <label htmlFor="">Completed</label>
         </div>
-        <Buttons ID={idTask} cssClass="btnEdit" titleButton="edit" handleEvent={Edit} />
-        <Buttons ID={idTask} cssClass="btnDelete" titleButton="delete" handleEvent={Delete} />
+        <div className="task-buttons-container">
+          <Buttons ID={idTask} cssClass="btnEdit" titleButton="edit" handleEvent={Edit} />
+          <Buttons ID={idTask} cssClass="btnDelete" titleButton="delete" handleEvent={Delete} />
+        </div>
       </div>
     </div>
   )

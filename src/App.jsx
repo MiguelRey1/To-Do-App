@@ -4,6 +4,8 @@ import FormTask from './components/form/formTask'
 import TaskList from './components/taskList'
 import { modalActive } from './JS/firabaseQuerys';
 import Buttons from './components/form/Buttons';
+import Banner from './components/banner';
+
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const taskContext = createContext(null);
@@ -39,8 +41,9 @@ function App() {
   return (
     <>
       <taskContext.Provider value={{task, setTask}}>
+        <Banner/>
         <FormTask Active={activeModal} OpenModal={openForm}/>
-        <Buttons titleButton="New Task" handleEvent={openForm}/>
+        <Buttons cssClass="newTask-btn" titleButton="New Task" handleEvent={openForm}/>
         <TaskList OpenModal={openForm}/>
       </taskContext.Provider>
     </>

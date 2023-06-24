@@ -1,5 +1,5 @@
 .TaskList-container {
-  margin-top: 15px;
+  margin: 0 auto 16px;
   padding: 15px;
   background-color: #181818;
   box-sizing: border-box;
@@ -9,5 +9,6 @@
   column-gap: 15px;
   row-gap: 15px;
   justify-items: center;
+  max-width: 1280px;
 
 }

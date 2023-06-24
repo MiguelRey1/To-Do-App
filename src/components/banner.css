@@ -1,0 +1,21 @@
+.banner-container{
+  position: relative;
+  box-sizing: border-box;
+}
+
+.banner-title{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  box-sizing: border-box;
+  /* padding: 10px; */
+}
+.banner-title>h1{
+  letter-spacing: 1rem;
+  margin: 0;
+}
+
+.banner-img-container>img{
+  width: 100%;
+  display: block;
+}
