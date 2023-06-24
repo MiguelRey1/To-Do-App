@@ -1,0 +1,75 @@
+.taskCard-container {
+  max-width: 300px;
+  width: 80%;
+  padding: 15px;
+  background-color: #1d2037;
+  border-radius: 8px;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 3px 3px 12px #000000bf;
+}
+
+.task-title-Element {
+  margin: 8px 0;
+}
+
+.task-description-title {
+  font-weight: 500;
+  font-size: 1.2em;
+  align-self: flex-start;
+  margin-left: 12px;
+  color: burlywood;
+}
+
+.task-date-Element {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #b9c1c5;
+}
+
+.task-description-Element {
+  overflow-y: auto;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.task-check-Element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  column-gap: 10px;
+}
+
+.task-check-Element>input {
+  margin: 0;
+  height: 16px;
+  width: 20px;
+
+}
+
+
+.btnEdit,
+.btnDelete {
+  max-width: 120px;
+  width: 100%;
+  margin: 0 5px;
+}
+
+.btnEdit {
+  background-color: #4d15d5;
+}
+
+.btnDelete {
+  background-color: #771100;
+}
+
+.completed{
+  background-color: darkgreen;
+}
+.completed>h2{
+  text-decoration: line-through;
+}

@@ -1,0 +1,13 @@
+.TaskList-container {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #181818;
+  box-sizing: border-box;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 15px;
+  row-gap: 15px;
+  justify-items: center;
+
+}
