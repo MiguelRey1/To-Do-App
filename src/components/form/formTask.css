@@ -34,6 +34,12 @@ h3{
   width: 100%;
 }
 
+.btnCancel{
+  background-color: #770000;
+  width: 100%;
+  margin-top: 10px;
+}
+
 .inactive{
   display: none;
 }

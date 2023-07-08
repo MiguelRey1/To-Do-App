@@ -4,7 +4,7 @@
   padding: 15px;
   background-color: #1d2037;
   border-radius: 8px;
-  max-height: 300px;
+  max-height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -24,7 +24,7 @@
 
 .task-date-Element {
   display: block;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   font-size: 1.2rem;
   color: #b9c1c5;
 }
@@ -41,6 +41,11 @@
   justify-content: center;
   padding: 10px;
   column-gap: 10px;
+}
+
+.task-check-Element>label,
+.task-check-Element>input{
+  cursor: pointer;
 }
 
 .task-check-Element>input {

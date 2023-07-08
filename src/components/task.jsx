@@ -11,13 +11,14 @@ import './task.css'
 function Task({title, description, datetask, Edit, Delete, idTask, CheckTask, cssClass}) {
   return (
     <div className={`taskCard-container ${cssClass}`}>
-      <h2 className="task-title-Element ">{title} <span className="task-date-Element">{datetask}</span></h2>
+      <h2 className="task-title-Element ">{title}</h2>
+      <span className="task-date-Element">{datetask}</span>
       <label className="task-description-title" htmlFor="">Description</label>
       <p  className="task-description-Element"> {description}</p>
       <div>
         <div className="task-check-Element">
           <input type="checkbox" onChange={(e)=>CheckTask(e)} name="completed" id={idTask} />
-          <label htmlFor="">Completed</label>
+          <label htmlFor={idTask}>Completed</label>
         </div>
         <div className="task-buttons-container">
           <Buttons ID={idTask} cssClass="btnEdit" titleButton="edit" handleEvent={Edit} />

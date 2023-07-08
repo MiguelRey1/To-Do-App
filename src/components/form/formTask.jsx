@@ -27,6 +27,10 @@ function FormTask({ Active, OpenModal }) {
    * * y agregar una nueva tarea (task) a la Base de Datos.
    */
   const handleAdd = async () => {
+
+    //? El proposito de esta linea guardar la longitud maxima del input
+    let maxLength = titleRef.current.value.length
+
     let newId = await getLastID();
     let newTask = {
       id: newId + 1,
@@ -38,18 +42,21 @@ function FormTask({ Active, OpenModal }) {
 
     let listid = await getID();
     let foundId = listid.find((el) => el === task.id);
-    if (foundId) {
+    if ( foundId && maxLength <= 20 ) {
       handleUpdate();
       OpenModal()
     } else {
-      //? Evalua si los inputs tienen datos, si estan vacios retorna el foco a los inputs
-      if (titleRef.current.value) {
+      /**
+      * * Evalua si los inputs tienen datos Y si su longitud es mayor a 100 carácteres, 
+      * * si estan vacios retorna el foco a los inputs 
+      * */
+      if ( titleRef.current.value && maxLength <= 20) {
         setTask(newTask);
         addData(newTask);
         //? Esta es una funcion pasada como props desde el padre para abrir y cerra la ventana modal
         OpenModal()
       } else {
-        titleRef.current.focus();
+        return  titleRef.current.focus();
       }
       setTask({
         id: 0,
@@ -87,6 +94,17 @@ function FormTask({ Active, OpenModal }) {
     });
   };
 
+  const handleCancel = () => {
+    setTask({
+      id: 0,
+      title: "",
+      description: "",
+      dateTask: new Date().toLocaleDateString(),
+      completed: false,
+    });
+    OpenModal()
+  }
+
   return (
     <div className={`formTask-container ${Active}`}>
       <div className="formTask--Element">
@@ -115,6 +133,13 @@ function FormTask({ Active, OpenModal }) {
           titleButton="Save"
           handleEvent={handleAdd}
         />
+        <Buttons
+          ID="Cancel"
+          cssClass="btnCancel"
+          titleButton="Cancel"
+          handleEvent={handleCancel}
+        />
+        <button type="button" onClick={()=>console.log(titleRef.current.value.length)}>Click me</button>
       </div>
     </div>
   );

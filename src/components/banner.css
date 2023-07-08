@@ -15,7 +15,10 @@
   margin: 0;
 }
 
-.banner-img-container>img{
+.banner-img-container{
+  position: relative;
+  /* box-sizing: border-box; */
   width: 100%;
-  display: block;
+  height: 250px;
+  background-image: url( "../assets/background-img.jpg" )
 }
